@@ -21,10 +21,15 @@ Download Physio MIMIC III v 1.4 and unzip csvs
 #### Tracking Server
 
 Start an MLFLOW Tracking Server (wiill create a sqllite db to store run links)
+from localhost:5000, create an experiment so that experiment 1 is populated
 
 ```sh
 mlflow server --backend-store-uri sqlite:///mydb.sqlite --default-artifact-root ~/mlruns
 ```
+all the experiments are logged at expirment_id=1 
+
+
+
 
 #### Feature Selection Methods
 to get pyCausalFS feature Selection methods, clone from git into the ml director (to keep imports from breaking)
